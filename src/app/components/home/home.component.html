@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="particles">
+    <div *ngFor="let particle of backgroundParticles" 
+         class="particle"
+         [style.left.px]="particle.x"
+         [style.top.px]="particle.y">
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="header">
+      <h1>Guillermo Rafael Pérez Castellanos</h1>
+      <h2>Desarrollador de Software</h2>
+    </div>
+
+    <div class="cards-container">
+      <div *ngFor="let card of infoCards"
+           class="info-card"
+           [@bubbleState]="card.state"
+           (mouseenter)="onCardHover(card)"
+           (mouseleave)="onCardLeave(card)">
+        
+        <div class="card-content">
+          <div class="icon-container">
+            <mat-icon>{{card.icon}}</mat-icon>
+          </div>
+          <h3>{{card.title}}</h3>
+          <h4>{{card.subTitle}}</h4>
+          <div class="description-container">
+            <p class="card-description">{{card.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <button class="gallery-button" (click)="toggleGallery()">
+        {{ imageGalleryOpen ? 'Ocultar Galería' : 'Ver Galería' }}
+      </button>
+
+      <div class="gallery-container" *ngIf="imageGalleryOpen">
+        <div class="gallery-grid">
+          <img src="assets/images/imagen1.jpg" alt="Imagen 1" class="gallery-image">
+          <img src="assets/images/imagen2.jpg" alt="Imagen 2" class="gallery-image">
+          <img src="assets/images/imagen3.jpg" alt="Imagen 3" class="gallery-image">
+          <img src="assets/images/imagen4.jpg" alt="Imagen 4" class="gallery-image">
+          <img src="assets/images/imagen5.jpg" alt="Imagen 5" class="gallery-image">
+          <img src="assets/images/imagen6.jpg" alt="Imagen 6" class="gallery-image">
+          <img src="assets/images/imagen7.jpg" alt="Imagen 7" class="gallery-image">
+          <img src="assets/images/imagen8.jpg" alt="Imagen 8" class="gallery-image">
+          <img src="assets/images/imagen9.jpg" alt="Imagen 9" class="gallery-image">
+          <img src="assets/images/imagen10.jpg" alt="Imagen 10" class="gallery-image">
+          <img src="assets/images/imagen11.jpg" alt="Imagen 11" class="gallery-image">
+          <img src="assets/images/imagen12.jpg" alt="Imagen 12" class="gallery-image">
+          <img src="assets/images/imagen13.jpg" alt="Imagen 13" class="gallery-image">
+          <img src="assets/images/imagen14.jpg" alt="Imagen 14" class="gallery-image">
+          <img src="assets/images/imagen15.jpg" alt="Imagen 15" class="gallery-image">
+          <img src="assets/images/imagen16.jpg" alt="Imagen 16" class="gallery-image">
+          <img src="assets/images/imagen17.jpg" alt="Imagen 17" class="gallery-image">
+          <img src="assets/images/imagen18.jpg" alt="Imagen 18" class="gallery-image">
+          <img src="assets/images/imagen19.jpg" alt="Imagen 19" class="gallery-image">
+          <img src="assets/images/imagen20.jpg" alt="Imagen 20" class="gallery-image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top" 
+          [class.visible]="showScrollTop" 
+          (click)="scrollToTop()">
+    <mat-icon>arrow_upward</mat-icon>
+  </button>
+</div>

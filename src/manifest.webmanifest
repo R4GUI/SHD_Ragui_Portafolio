@@ -1,0 +1,33 @@
+{
+  "name": "Portfolio RAGUI",
+  "short_name": "Portfolio RAGUI",
+  "theme_color": "#1a1a2e",
+  "background_color": "#1a1a2e",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/desktop.png",
+      "sizes": "1899x869",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "assets/screenshots/mobile.png",
+      "sizes": "553x729",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "id": "portfolio-ragui",
+  "description": "Portfolio personal de Guillermo Rafael Pérez Castellanos"
+}
